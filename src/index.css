@@ -1,13 +1,64 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#homeHeader {
+  border-bottom: 3px solid;
+}
+
+#junkademy {
+  display: inline-block;
+}
+
+#headerButtonsDiv {
+  float: right;
+}
+
+#loginsDiv {
+  float: right;
+}
+
+#adminLogin {
+  display: block;
+}
+
+#userLogin {
+  display: block;
+  width: 100%;
+}
+
+#codeBlockLibrary {
+  display: inline-block;
+  border-right: 3px solid;
+  height: 88.5vh; /*means 100% of screen size: need to make it dynamic where its screen size - height of header*/
+  vertical-align: top;
+}
+
+.lightBottom {
+  border-bottom: 1px solid;
+}
+
+#east {
+  display: inline-block;
+}
+
+#sandbox {
+  display: inline-block;
+  width: 800px; /* make dynamic*/
+  border-right: 3px solid;
+  height: 60vh;
+}
+
+#workspace {
+  width: 100%;
+  height: 100%;
+}
+
+#jWindow {
+  display: inline-block;
+  width: 372px;
+}
+
+#tWindow {
+  border-top: 3px solid;
 }
