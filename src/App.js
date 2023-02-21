@@ -6,16 +6,12 @@ import TWindow from "./components/TWindow";
 
 function App() {
   return (
-    <div>
+    <div id="mainGrid">
       <HomeHeader />
-      <div id="mainPage">
-        <CodeBlockLibrary />
-        <div id="east">
-          <Sandbox />
-          <JWindow />
-          <TWindow />
-        </div>
-      </div>
+      <CodeBlockLibrary />
+      <Sandbox />
+      <JWindow />
+      <TWindow />
     </div>
   );
 }
