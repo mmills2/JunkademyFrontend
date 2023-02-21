@@ -2,12 +2,31 @@ body {
   margin: 0px;
 }
 
+@font-face {
+  font-family: custom-font;
+  src: url(Bungee-Regular.ttf);
+}
+
+#mainGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  height: 100vh;
+}
+
 #homeHeader {
   border-bottom: 3px solid;
+  grid-column: 1 / span 6;
 }
 
 #junkademy {
   display: inline-block;
+  font-family: custom-font;
+  margin: 0;
+}
+
+#junkademy::first-letter {
+  color: red;
 }
 
 #headerButtonsDiv {
@@ -30,23 +49,19 @@ body {
 #codeBlockLibrary {
   display: inline-block;
   border-right: 3px solid;
-  height: 88.5vh; /*means 100% of screen size: need to make it dynamic where its screen size - height of header*/
   vertical-align: top;
+  grid-row: 2 / span 6;
 }
 
 .lightBottom {
   border-bottom: 1px solid;
 }
 
-#east {
-  display: inline-block;
-}
-
 #sandbox {
   display: inline-block;
-  width: 800px; /* make dynamic*/
+  grid-column: 2 / span 3;
+  grid-row: 2 / span 4;
   border-right: 3px solid;
-  height: 60vh;
 }
 
 #workspace {
@@ -56,9 +71,11 @@ body {
 
 #jWindow {
   display: inline-block;
-  width: 372px;
+  grid-column: 5 / span 2;
+  grid-row: 2 / span 4;
 }
 
 #tWindow {
   border-top: 3px solid;
+  grid-column: 2 / span 6;
 }
