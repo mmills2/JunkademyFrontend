@@ -3,12 +3,14 @@ function HomeHeader() {
     <div id="homeHeader">
       <h1 id="junkademy">Junkademy</h1>
       <div id="headerButtonsDiv">
-        <button type="button">Challenges</button>
+        <button id="challengesBut" className="headerButton" type="button">
+          Challenges
+        </button>
         <div id="loginsDiv">
-          <button id="adminLogin" type="button">
+          <button id="adminLogin" className="headerButton" type="button">
             Admin Login
           </button>
-          <button id="userLogin" type="button">
+          <button id="userLogin" className="headerButton" type="button">
             Login
           </button>
         </div>
