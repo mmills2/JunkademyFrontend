@@ -108,6 +108,7 @@ body {
 #catTitle {
   margin: 0em 0em 0em 0.4em;
   font-weight: normal;
+  font-size: 1.4em;
 }
 
 #categories {
@@ -149,4 +150,19 @@ body {
 
 #tReturn {
   height: 100%;
+}
+
+.catDivs {
+  width: 100%;
+}
+
+.catBtns {
+  background-color: #fffcea;
+  font-family: "custom-font";
+  font-size: 1.3em;
+  width: 100%;
+  text-align: left;
+  border-style: solid none;
+  border-width: 0.01em;
+  padding: 0em 0.6em;
 }
