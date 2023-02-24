@@ -1,5 +1,4 @@
 import { Dropdown } from "./Dropdown.js";
-import { Element } from "./TestElement.js";
 
 function CodeBlockLibrary() {
   return (
@@ -12,7 +11,16 @@ function CodeBlockLibrary() {
       <div id="catTitleDiv" className="contentDiv">
         <h3 id="catTitle">Categories</h3>
       </div>
-      <div id="categories" className="contentDiv"></div>
+      <div id="categories" className="contentDiv">
+        <Dropdown catTitle={"Structural"}>
+          <div>Blocks go here</div>
+        </Dropdown>
+        <Dropdown catTitle={"Variables"} />
+        <Dropdown catTitle={"Conditional"} />
+        <Dropdown catTitle={"Iterative"} />
+        <Dropdown catTitle={"I/O"} />
+        <Dropdown catTitle={"Operators"} />
+      </div>
     </div>
   );
 }
