@@ -4,12 +4,12 @@ body {
 
 @font-face {
   font-family: logo-font;
-  src: url(Bungee-Regular.ttf);
+  src: url(fonts/Bungee-Regular.ttf);
 }
 
 @font-face {
   font-family: custom-font;
-  src: url(McLaren-Regular.ttf);
+  src: url(fonts/McLaren-Regular.ttf);
 }
 
 #mainGrid {
