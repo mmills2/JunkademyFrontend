@@ -15,8 +15,17 @@ function CodeBlockLibrary() {
         <Dropdown catTitle={"Structural"}>
           <div>Blocks go here</div>
         </Dropdown>
-        <Dropdown catTitle={"Variables"} />
-        <Dropdown catTitle={"Conditional"} />
+        <Dropdown catTitle={"Variables"}>
+          <div>I am a block</div>
+          <div>I am another block</div>
+        </Dropdown>
+        <Dropdown catTitle={"Conditional"}>
+          <div>B</div>
+          <div>Bl</div>
+          <div>Blo</div>
+          <div>Bloc</div>
+          <div>Block</div>
+        </Dropdown>
         <Dropdown catTitle={"Iterative"} />
         <Dropdown catTitle={"I/O"} />
         <Dropdown catTitle={"Operators"} />
