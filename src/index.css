@@ -172,3 +172,9 @@ body {
   border: 1px solid;
   width: fit-content;
 }
+
+.test{
+  border: 1px solid;
+  width: fit-content;
+  height: 100%;
+}
