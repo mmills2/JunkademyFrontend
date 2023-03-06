@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 function HomeHeader() {
+  
   return (
     <div id="homeHeader">
       <h1 id="junkademy">Junkademy</h1>
@@ -9,12 +11,12 @@ function HomeHeader() {
           Challenges
         </button>
         <div id="loginsDiv">
-          <a href="/adminlogin">
+          <a href="/adminlogin.html">
           <button id="adminLogin" className="headerButton" type="button">
             Admin Login
           </button>
           </a>
-          <a href="/login">
+          <a href="/login.html">
           <button id="userLogin" className="headerButton" type="button">
             Login
           </button>

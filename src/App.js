@@ -3,8 +3,8 @@ import CodeBlockLibrary from "./components/CodeBlockLibrary";
 import Sandbox from "./components/Sandbox";
 import JWindow from "./components/JWindow.js";
 import TWindow from "./components/TWindow";
-import LoginPage from "./components/LoginPage";
-import AdminLoginPage from "./components/AdminLoginPage.js";
+import LoginPage from "./LoginPage";
+import AdminLoginPage from "./AdminLoginPage.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
