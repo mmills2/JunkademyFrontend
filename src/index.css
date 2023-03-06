@@ -126,7 +126,7 @@ body {
 #workspace {
   width: 100%;
   height: 100%;
-  position: relative
+  position: relative;
 }
 
 #jWindow {
@@ -168,7 +168,16 @@ body {
   padding: 0em 0.6em;
 }
 
-.workspaceBlock{
+.workspaceBlock {
   border: 1px solid;
   width: fit-content;
+  position: relative;
+  z-index: 1;
+}
+
+.cblBlock {
+  border: 1px solid;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
 }

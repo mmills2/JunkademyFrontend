@@ -1,3 +1,5 @@
+import Draggable, { DraggableCore } from "react-draggable";
+import CBLBlock from "./CBLBlock.js";
 import { Dropdown } from "./Dropdown.js";
 
 function CodeBlockLibrary() {
@@ -26,7 +28,11 @@ function CodeBlockLibrary() {
           <div>Bloc</div>
           <div>Block</div>
         </Dropdown>
-        <Dropdown catTitle={"Iterative"} />
+        <Dropdown catTitle={"Iterative"}>
+          <CBLBlock cblTitle={"test drag"}></CBLBlock>
+          <CBLBlock cblTitle={"hhhhhhhhhh"}></CBLBlock>
+          <CBLBlock cblTitle={"babababa"}></CBLBlock>
+        </Dropdown>
         <Dropdown catTitle={"I/O"} />
         <Dropdown catTitle={"Operators"} />
       </div>
