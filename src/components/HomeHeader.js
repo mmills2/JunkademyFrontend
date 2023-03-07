@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 function HomeHeader() {
   
   return (
+    
     <div id="homeHeader">
       <h1 id="junkademy">Junkademy</h1>
       <div id="headerButtonsDiv">
@@ -11,7 +12,7 @@ function HomeHeader() {
           Challenges
         </button>
         <div id="loginsDiv">
-          <a href="/adminlogin.html">
+        <a href="/login5.html">
           <button id="adminLogin" className="headerButton" type="button">
             Admin Login
           </button>

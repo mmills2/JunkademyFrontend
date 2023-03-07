@@ -1,94 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Login Form</title>
-  <style>
-    @font-face {
-    font-family: logo-font;
-    src: url(fonts/Bungee-Regular.ttf);
-    }
-
-    @font-face {
-    font-family: custom-font;
-    src: url(fonts/McLaren-Regular.ttf);
-    }
-
-    body {
-      background-color: #ffbf9a;
-      font-family: logo-font, custom-font; 
-    }
-    
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    
-    form {
-      max-width: 500px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgba(0,0,0,.1);
-    }
-    
-    label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-    
-    button[type="submit"] {
-      background-color: #4CAF50;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-family: logo-font;
-    }
-    
-    button[type="submit"]:hover {
-      background-color: #45a049;
-      font-family: logo-font;
-    }
-  </style>
+    <style>
+#center {  
+    position: fixed;
+  bottom: 0;
+  right: 0; 
+}
+    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width,
+						initial-scale=1.0">
+	<title>Junkademy Login/Register</title>
+	<link rel="stylesheet"
+		href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <form>
-        <h1>
-            Please log in
-        </h1>
-      <label>
-        Username:
-        <input type="text" name="username">
-      </label>
-      <br>
-      <label>
-        Password:
-        <input type="password" name="password">
-      </label>
-      <br>
-      <button type="submit">Log In</button>
-    </form>
-    <div id="loginsDiv">
-    <a href="/CreateAccount.html">
-    <button id="createAccount className="headerButton" type="button">
-          Create Account
-    </button>
-    </a>
-  </div>
+	<header>
+		<h1 class="heading">Junkademy</h1>
+		<h3 class="title">Login & Registration Form</h3>
+	</header>
+	<div class="container">
+       
+		<div class="slider"></div>
+		<div class="btn">
+			<button class="login">Login</button>
+			<button class="signup">Signup</button>
+		</div>
+
+		<div class="form-section">
+
+			<div class="login-box">
+				<input type="text"
+					class="name ele"
+					placeholder="username">
+				<input type="password"
+					class="password ele"
+					placeholder="password">
+                    <a href="/">
+				<button class="clkbtn">Login</button>
+                </a>
+			</div>
+
+			<div class="signup-box">
+				<input type="text"
+					class="name ele"
+					placeholder="Enter your username">
+				
+				<input type="password"
+					class="password ele"
+					placeholder="password">
+				<input type="password"
+					class="password ele"
+					placeholder="Confirm password">
+                    <a href="/">
+				<button class="clkbtn">Signup</button>
+            </a>
+			</div>
+		</div>
+	</div>
+    
+	<script src="login.js"></script>
 </body>
+<div id ="center">
+    <img src="fonts/toilet-cartoon-clipart-24.png" style="width:15%">
+</div>
+<div id ="right">
+    <img src="fonts/ImageNameHere.png" style="width:75%">
+</div>
 </html>
