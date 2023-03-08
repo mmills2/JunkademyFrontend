@@ -12,7 +12,7 @@ function HomeHeader() {
           Challenges
         </button>
         <div id="loginsDiv">
-        <a href="/login5.html">
+        <a href="/login.html">
           <button id="adminLogin" className="headerButton" type="button">
             Admin Login
           </button>
