@@ -11,6 +11,12 @@ const workspaceBlocks = [
   },
   {
     name: "block 3"
+  },
+  {
+    name: "block 4"
+  },
+  {
+    name: "block 5"
   }
 ]
 
@@ -18,11 +24,14 @@ function Sandbox() {
   const [blocks,updateBlocks] = useState(workspaceBlocks)
 
   function handleOnDragEnd(result){
-    if(!result.destination) return;
     const items = Array.from(blocks);
     const [reorderedItem] = items.splice(result.source.index,1);
-    items.splice(result.destination.index,0,reorderedItem);
+    if(!result.destination){
+      updateBlocks(items);
+      return;
+    }
 
+    items.splice(result.destination.index,0,reorderedItem);
     updateBlocks(items);
   }
 
