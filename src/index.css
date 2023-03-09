@@ -178,3 +178,13 @@ body {
   width: fit-content;
   height: 100%;
 }
+
+.workspaceBlockList li {
+  display: flex;
+  align-items: center;
+  border: solid 2px #d0d0d0;
+  /*border-radius: .2em;*/
+  padding: .2em .2em .2em .2em;
+  margin-bottom: .5em;
+  width: fit-content;
+}
