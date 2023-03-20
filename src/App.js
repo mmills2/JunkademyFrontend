@@ -3,7 +3,6 @@ import CodeBlockLibrary from "./components/CodeBlockLibrary";
 import Sandbox from "./components/Sandbox";
 import JWindow from "./components/JWindow.js";
 import TWindow from "./components/TWindow";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -13,11 +12,6 @@ function App() {
     <Sandbox />
     <JWindow />
     <TWindow />
-    <Router>
-      <Routes>
-        <Route path="/" element={<mainGrid />} />
-      </Routes>
-   </Router>
    </div>
    
   );
