@@ -4,7 +4,8 @@ function TWindow() {
       <div className="mainTitleDiv">
         <h2 className="mainTitles">Terminal</h2>
       </div>
-      <div id="tReturn" className="contentDiv"></div>
+      <div id="tReturn" className="contentDiv">
+      </div>
     </div>
   );
 }

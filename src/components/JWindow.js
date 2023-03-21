@@ -1,7 +1,12 @@
+import { toHaveAccessibleName } from "@testing-library/jest-dom/dist/matchers";
+
 function JWindow() {
 
   function onClick(){
-    console.log(document.querySelectorAll(".workspaceBlock"))
+    const blocks = document.querySelectorAll(".workspaceBlock");
+    blocks.forEach(element =>
+        console.log(element.textContent)
+      );
   }
 
   return (
@@ -10,6 +15,9 @@ function JWindow() {
         <h2 className="mainTitles">Java Syntax Window</h2>
       </div>
       <div id="window" className="contentDiv">
+        <button onClick = {onClick} type="button">
+          Generate
+        </button>
       </div>
     </div>
   );

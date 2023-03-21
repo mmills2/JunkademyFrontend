@@ -188,3 +188,8 @@ body {
   margin-bottom: .5em;
   width: fit-content;
 }
+
+.workspaceBlockList {
+  display: inline-block;
+  border: solid 2px #000000be;
+}

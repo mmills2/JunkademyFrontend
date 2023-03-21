@@ -6,6 +6,7 @@ function WorkspaceBlock(props){
     return (
         <div className="workspaceBlock">
             {name}
+            <input type="text" name="parameter"></input>
         </div>
     );
 }
