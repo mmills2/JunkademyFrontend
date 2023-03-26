@@ -6,10 +6,9 @@ import TWindow from "./components/TWindow";
 import React, {useState} from 'react';
 
 function App() {
-  const [content,updateContent] = useState("default");
+  const [content,updateContent] = useState("");
 
   function updateSandbox(text){
-    console.log("in App: " + text);
     updateContent(text);
   }
 

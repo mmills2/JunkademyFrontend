@@ -8,14 +8,8 @@ function CodeBlockLibrary(props) {
     updateSandbox(text);
   }
 
-  function handleClick(){
-    //console.log("cbl clicked");
-    // console.log("event.target: " + event.target);
-    // console.log("event.currentTarget: " + event.currentTarget);
-  }
-
   return (
-    <div id="codeBlockLibrary" onClick = {handleClick}>
+    <div id="codeBlockLibrary">
       <div className="mainTitleDiv">
         <h2 className="mainTitles" id="cblTitle">
           Code Block Library
