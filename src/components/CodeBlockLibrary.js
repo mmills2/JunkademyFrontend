@@ -1,9 +1,21 @@
 import { Dropdown } from "./Dropdown.js";
 import {CBLButton} from "./CBLButton.js";
 
-function CodeBlockLibrary() {
+function CodeBlockLibrary(props) {
+  let updateSandbox = props.updateSandbox;
+
+  function updateText(text){
+    updateSandbox(text);
+  }
+
+  function handleClick(){
+    //console.log("cbl clicked");
+    // console.log("event.target: " + event.target);
+    // console.log("event.currentTarget: " + event.currentTarget);
+  }
+
   return (
-    <div id="codeBlockLibrary">
+    <div id="codeBlockLibrary" onClick = {handleClick}>
       <div className="mainTitleDiv">
         <h2 className="mainTitles" id="cblTitle">
           Code Block Library
@@ -14,19 +26,12 @@ function CodeBlockLibrary() {
       </div>
       <div id="categories" className="contentDiv">
         <Dropdown catTitle={"Structural"}>
-          <CBLButton/>
+          <CBLButton updateText = {updateText} name = "Print" content = "printing test content gay"/>
+          <CBLButton updateText = {updateText} name = "Loop" content = "again and again"/>
+          <CBLButton updateText = {updateText} name = "If" content = "maybe? maybe not"/>
         </Dropdown>
-        <Dropdown catTitle={"Variables"}>
-          <div>I am a block</div>
-          <div>I am another block</div>
-        </Dropdown>
-        <Dropdown catTitle={"Conditional"}>
-          <div>B</div>
-          <div>Bl</div>
-          <div>Blo</div>
-          <div>Bloc</div>
-          <div>Block</div>
-        </Dropdown>
+        <Dropdown catTitle={"Variables"} />
+        <Dropdown catTitle={"Conditional"} />
         <Dropdown catTitle={"Iterative"} />
         {/* <Dropdown catTitle={"I/O"} /> */}
         <Dropdown catTitle={"Operators"} />

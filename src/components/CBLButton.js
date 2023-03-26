@@ -1,12 +1,15 @@
-function CBLButton(){
+function CBLButton(props){
+    let updateText = props.updateText;
+    let name = props.name;
+    let content = props.content;
 
     function handleClick() {
-        console.log("clicked");
+        updateText(content);
     }
 
     return(
         <div onClick = {handleClick} className="CBLBlock">
-            Click me
+            {name}
         </div>
     );
 }

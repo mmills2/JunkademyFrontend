@@ -2,14 +2,16 @@ import WorkspaceBlock from "./WorkspaceBlock";
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-function Sandbox() {
+function Sandbox(props) {
+  let content = props.content;
+
   return (
     <div id="sandbox">
       <div className="mainTitleDiv">
         <h2 className="mainTitles">Information</h2>
       </div>
       <div id="workspace" className="contentDiv">
-        
+        {content}
       </div>
     </div>
   );

@@ -3,13 +3,21 @@ import CodeBlockLibrary from "./components/CodeBlockLibrary";
 import Sandbox from "./components/Sandbox";
 import JWindow from "./components/JWindow.js";
 import TWindow from "./components/TWindow";
+import React, {useState} from 'react';
 
 function App() {
+  const [content,updateContent] = useState("default");
+
+  function updateSandbox(text){
+    console.log("in App: " + text);
+    updateContent(text);
+  }
+
   return (
     <div id="mainGrid">
       <HomeHeader />
-      <CodeBlockLibrary />
-      <Sandbox />
+      <CodeBlockLibrary updateSandbox = {updateSandbox}/>
+      <Sandbox content = {content}/>
       {/* <JWindow /> */}
       {/* <TWindow /> */}
     </div>
