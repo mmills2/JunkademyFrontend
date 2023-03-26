@@ -1,4 +1,5 @@
 import { Dropdown } from "./Dropdown.js";
+import {CBLButton} from "./CBLButton.js";
 
 function CodeBlockLibrary() {
   return (
@@ -13,7 +14,7 @@ function CodeBlockLibrary() {
       </div>
       <div id="categories" className="contentDiv">
         <Dropdown catTitle={"Structural"}>
-          <div>Blocks go here</div>
+          <CBLButton/>
         </Dropdown>
         <Dropdown catTitle={"Variables"}>
           <div>I am a block</div>
