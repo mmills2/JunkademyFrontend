@@ -25,16 +25,38 @@ function CodeBlockLibrary(props) {
         <h3 id="catTitle">Categories</h3>
       </div>
       <div id="categories" className="contentDiv">
-        <Dropdown catTitle={"Structural"}>
-          <CBLButton updateText = {updateText} name = "Print" content = "printing test"/>
-          <CBLButton updateText = {updateText} name = "Loop" content = "again and again"/>
-          <CBLButton updateText = {updateText} name = "If" content = "maybe? maybe not"/>
+        <Dropdown catTitle={"Structural"} >
+          <CBLButton updateText = {updateText} name = "Print" content = "print content"/>
         </Dropdown>
-        <Dropdown catTitle={"Variables"} />
-        <Dropdown catTitle={"Conditional"} />
-        <Dropdown catTitle={"Iterative"} />
+        <Dropdown catTitle={"Variables"} >
+          <CBLButton updateText = {updateText} name = "Integer" content = "integer content"/>
+          <CBLButton updateText = {updateText} name = "Double" content = "double content"/>
+          <CBLButton updateText = {updateText} name = "Boolean" content = "bool content"/>
+          <CBLButton updateText = {updateText} name = "Character" content = "char content"/>
+          <CBLButton updateText = {updateText} name = "String" content = "string content"/>
+          <CBLButton updateText = {updateText} name = "Array" content = "array content"/>
+          </Dropdown>
+        <Dropdown catTitle={"Conditional"} >
+          <CBLButton updateText = {updateText} name = "If" content = "if content"/>
+          <CBLButton updateText = {updateText} name = "Else" content = "else content"/>
+        </Dropdown>
+        <Dropdown catTitle={"Iterative"} >
+          <CBLButton updateText = {updateText} name = "For Loop" content = "for loop content"/>
+          <CBLButton updateText = {updateText} name = "While Loop" content = "while loop content"/>
+        </Dropdown>
         {/* <Dropdown catTitle={"I/O"} /> */}
-        <Dropdown catTitle={"Operators"} />
+        <Dropdown catTitle={"Operators"} >
+          <CBLButton updateText = {updateText} name = "Add" content = "add content"/>
+          <CBLButton updateText = {updateText} name = "Subtract" content = "subtraction content"/>
+          <CBLButton updateText = {updateText} name = "Multiply" content = "multiplication content"/>
+          <CBLButton updateText = {updateText} name = "Divide" content = "division content"/>
+          <CBLButton updateText = {updateText} name = "And" content = "and content"/>
+          <CBLButton updateText = {updateText} name = "Or" content = "or content"/>
+          <CBLButton updateText = {updateText} name = "Equals" content = "equals content"/>
+          <CBLButton updateText = {updateText} name = "Not" content = "not content"/>
+          <CBLButton updateText = {updateText} name = "Greater Than" content = "greater than content"/>
+          <CBLButton updateText = {updateText} name = "Less Than" content = "less than content"/>
+        </Dropdown>
       </div>
     </div>
   );
