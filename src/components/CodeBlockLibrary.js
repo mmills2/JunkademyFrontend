@@ -26,7 +26,7 @@ function CodeBlockLibrary(props) {
       </div>
       <div id="categories" className="contentDiv">
         <Dropdown catTitle={"Structural"}>
-          <CBLButton updateText = {updateText} name = "Print" content = "printing test content gay"/>
+          <CBLButton updateText = {updateText} name = "Print" content = "printing test"/>
           <CBLButton updateText = {updateText} name = "Loop" content = "again and again"/>
           <CBLButton updateText = {updateText} name = "If" content = "maybe? maybe not"/>
         </Dropdown>
