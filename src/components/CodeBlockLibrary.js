@@ -27,7 +27,7 @@ function CodeBlockLibrary() {
           <div>Block</div>
         </Dropdown>
         <Dropdown catTitle={"Iterative"} />
-        <Dropdown catTitle={"I/O"} />
+        {/* <Dropdown catTitle={"I/O"} /> */}
         <Dropdown catTitle={"Operators"} />
       </div>
     </div>
