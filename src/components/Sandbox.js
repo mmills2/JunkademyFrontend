@@ -2,6 +2,23 @@ import WorkspaceBlock from "./WorkspaceBlock";
 import React, { useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
+function Sandbox() {
+  return (
+    <div id="sandbox">
+      <div className="mainTitleDiv">
+        <h2 className="mainTitles">Information</h2>
+      </div>
+      <div id="workspace" className="contentDiv">
+        
+      </div>
+    </div>
+  );
+}
+
+export default Sandbox;
+
+/*
+
 const workspaceBlocks = [
   {
     name: "block 1",
@@ -20,8 +37,7 @@ const workspaceBlocks = [
   },
 ];
 
-function Sandbox() {
-  const [blocks, updateBlocks] = useState(workspaceBlocks);
+const [blocks, updateBlocks] = useState(workspaceBlocks);
 
   function handleOnDragEnd(result) {
     const items = Array.from(blocks);
@@ -35,13 +51,7 @@ function Sandbox() {
     updateBlocks(items);
   }
 
-  return (
-    <div id="sandbox">
-      <div className="mainTitleDiv">
-        <h2 className="mainTitles">Information</h2>
-      </div>
-      <div id="workspace" className="contentDiv">
-        <DragDropContext onDragEnd={handleOnDragEnd}>
+<DragDropContext onDragEnd={handleOnDragEnd}>
           <Droppable droppableId="workspaceBlockList">
             {(provided) => (
               <ul
@@ -69,9 +79,4 @@ function Sandbox() {
             )}
           </Droppable>
         </DragDropContext>
-      </div>
-    </div>
-  );
-}
-
-export default Sandbox;
+*/
