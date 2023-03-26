@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  height: 100vh;
+  /* height: 100vh; */
   font-family: custom-font;
 }
 
