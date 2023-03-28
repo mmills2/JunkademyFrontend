@@ -16,7 +16,6 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  /*height: 100vh; */
   min-height: 100vh;
   font-family: custom-font;
 }
@@ -192,13 +191,13 @@ body {
   width: fit-content;
 }
 
-#planZTitle{
+#planZTitle {
   margin-top: 0px;
 }
 
-#planZSnippet{
-  font-family: 'Courier New', Courier, monospace;
+#planZSnippet {
+  font-family: "Courier New", Courier, monospace;
   font-weight: normal;
   /*border: solid 1px;*/
-  width: fit-content
+  width: fit-content;
 }
