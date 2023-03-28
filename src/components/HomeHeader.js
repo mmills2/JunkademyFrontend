@@ -5,7 +5,7 @@ function HomeHeader() {
   return (
     <div id="homeHeader">
       <h1 id="junkademy">Junkademy</h1>
-      {/* <div id="headerButtonsDiv">
+      <div id="headerButtonsDiv">
         <button id="challengesBut" className="headerButton" type="button">
           Challenges
         </button>
@@ -21,7 +21,7 @@ function HomeHeader() {
           </button>
           </a>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
