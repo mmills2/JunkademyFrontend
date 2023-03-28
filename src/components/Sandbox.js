@@ -4,6 +4,8 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 function Sandbox(props) {
   let content = props.content;
+  let title = props.title;
+  let codeSnippet = props.codeSnippet;
 
   return (
     <div id="sandbox">
@@ -11,7 +13,9 @@ function Sandbox(props) {
         <h2 className="mainTitles">Information</h2>
       </div>
       <div id="workspace" className="contentDiv">
-        {content}
+        <h1 id="planZTitle">{title}</h1>
+        <h3 id="planZSnippet">{codeSnippet}</h3>
+        <h3>{content}</h3>
       </div>
     </div>
   );
