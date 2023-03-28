@@ -198,6 +198,7 @@ body {
 
 #planZSnippet{
   font-family: 'Courier New', Courier, monospace;
+  font-weight: normal;
   border: solid 1px;
   width: fit-content
 }

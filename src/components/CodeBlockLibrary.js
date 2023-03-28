@@ -38,13 +38,13 @@ function CodeBlockLibrary(props) {
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet}
             name = "Integer" codeSnippet = "int apples = 5;" content = "integer content"/>
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet} 
-            name = "Double" codeSnippet = "double miles = 3.7" content = "double content"/>
+            name = "Double" codeSnippet = "double miles = 3.7;" content = "double content"/>
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet} 
-            name = "Boolean" codeSnippet = "bool isHungry = true" content = "bool content"/>
+            name = "Boolean" codeSnippet = "bool isHungry = true;" content = "bool content"/>
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet} 
-            name = "Character" codeSnippet = {"char firstLetter = \'A\'"} content = "char content"/>
+            name = "Character" codeSnippet = {"char firstLetter = \'A\';"} content = "char content"/>
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet} 
-            name = "String" codeSnippet = "string snippet" content = "string content"/>
+            name = "String" codeSnippet = {"String name = \"Big Bird\""} content = "string content"/>
           <CBLButton updateText = {updateText} updateTitle = {CBLUpdateTitle} updateCodeSnippet = {CBLUpdateCodeSnippet} 
             name = "Array" codeSnippet = "array snippet" content = "array content"/>
           </Dropdown>
