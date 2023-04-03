@@ -1,19 +1,13 @@
-import { Component } from "react";
-import Draggable, {DraggableCore} from 'react-draggable';
+import React from "react";
 
-function WorkspaceBlock(){
+function WorkspaceBlock(props){
+    let name = props.name
+
     return (
-        <Draggable bounds={"parent"}>
-            <div className="workspaceBlock">
-                Drag me!
-            </div>
-        </Draggable>
+        <div className="workspaceBlock">
+            {name}
+        </div>
     );
 }
 
 export default WorkspaceBlock;
-
-
-
-
-
