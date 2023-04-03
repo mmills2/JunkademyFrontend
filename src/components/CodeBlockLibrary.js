@@ -1,4 +1,5 @@
 import { Dropdown } from "./Dropdown.js";
+import { CBLButton } from "./CBLButton.js";
 
 function CodeBlockLibrary() {
   return (
@@ -12,23 +13,77 @@ function CodeBlockLibrary() {
         <h3 id="catTitle">Categories</h3>
       </div>
       <div id="categories" className="contentDiv">
-        <Dropdown catTitle={"Structural"}>
-          <div>Blocks go here</div>
-        </Dropdown>
         <Dropdown catTitle={"Variables"}>
-          <div>I am a block</div>
-          <div>I am another block</div>
+        <CBLButton
+            name="Integer"
+          />
+          <CBLButton
+            name="Double"
+          />
+          <CBLButton
+            name="Boolean"
+          />
+          <CBLButton
+            name="Character"
+          />
+          <CBLButton
+            name="String"
+          />
         </Dropdown>
         <Dropdown catTitle={"Conditional"}>
-          <div>B</div>
-          <div>Bl</div>
-          <div>Blo</div>
-          <div>Bloc</div>
-          <div>Block</div>
+        <CBLButton
+            name="If"
+          />
+          <CBLButton
+            name="Else"
+          />
         </Dropdown>
-        <Dropdown catTitle={"Iterative"} />
-        <Dropdown catTitle={"I/O"} />
-        <Dropdown catTitle={"Operators"} />
+        <Dropdown catTitle={"Iterative"} >
+        <CBLButton
+            name="For Loop"
+          />
+          <CBLButton
+            name="While Loop"
+          />
+        </Dropdown>
+        {/*<Dropdown catTitle={"I/O"} />*/}
+        <Dropdown catTitle={"Operators"} >
+        <CBLButton
+            name="Add"
+          />
+          <CBLButton
+            name="Subtract"
+          />
+          <CBLButton
+            name="Multiply"
+          />
+          <CBLButton
+            name="Divide"
+          />
+          <CBLButton
+            name="And"
+          />
+          <CBLButton
+            name="Or"
+          />
+          <CBLButton
+            name="Equals"
+          />
+          <CBLButton
+            name="Not"
+          />
+          <CBLButton
+            name="Greater Than"
+          />
+          <CBLButton
+            name="Less Than"
+          />
+        </Dropdown>
+        <Dropdown catTitle={"Output"}>
+          <CBLButton
+            name="Print"
+          />
+        </Dropdown>
       </div>
     </div>
   );
