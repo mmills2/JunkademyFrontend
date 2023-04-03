@@ -16,8 +16,10 @@ function Dropdown(props) {
   }
 
   return (
-    <div className="catDivs" onClick={handleClick}>
-      <button className="catBtns">{textState}</button>
+    <div className="catDivs">
+      <button className="catBtns" onClick={handleClick}>
+        {textState}
+      </button>
       <div style={{ display: displayState }}>{props.children}</div>
     </div>
   );
