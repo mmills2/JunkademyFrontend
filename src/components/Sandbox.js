@@ -1,5 +1,5 @@
 import WorkspaceBlock from "./WorkspaceBlock";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const workspaceBlocks = [
@@ -20,7 +20,10 @@ const workspaceBlocks = [
   },
 ];
 
-function Sandbox() {
+function Sandbox(props) {
+  let addedBlock = props.addedBlock;
+  let count = props.count;
+
   const [blocks, updateBlocks] = useState(workspaceBlocks);
 
   function handleOnDragEnd(result) {
@@ -35,11 +38,17 @@ function Sandbox() {
     updateBlocks(items);
   }
 
-  function addBlock() {
-    let newBlock = [{ name: "block " + (blocks.length + 1) }];
-    let newArray = blocks.concat(newBlock);
-    updateBlocks(newArray);
-  }
+  useEffect(() => {
+    function addBlock() {
+      let newBlock = [{ name: addedBlock }];
+      let newArray = blocks.concat(newBlock);
+      updateBlocks(newArray);
+    }
+
+    if (count !== 0) {
+      addBlock();
+    }
+  }, [count]);
 
   return (
     <div id="sandbox">
@@ -75,7 +84,7 @@ function Sandbox() {
             )}
           </Droppable>
         </DragDropContext>
-        <button onClick={addBlock}>Add Block</button>
+        {/* <button onClick={addBlock}>Add Block</button> */}
       </div>
     </div>
   );
