@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "node-pty": "^0.10.1",
     "pg": "^8.9.0",
     "react": "^18.2.0",
     "react-beautiful-dnd": "^13.1.1",
@@ -17,7 +18,10 @@
     "react-router-dom": "^6.8.2",
     "react-scripts": "5.0.1",
     "styled-components": "^5.3.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xterm": "^5.1.0",
+    "xterm-addon-attach": "^0.8.0",
+    "xterm-addon-fit": "^0.7.0"
   },
   "scripts": {
     "start": "react-scripts start",
