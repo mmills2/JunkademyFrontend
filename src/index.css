@@ -171,6 +171,7 @@ body {
 .workspaceBlock {
   border: 1px solid;
   width: fit-content;
+  display: flex;
 }
 
 .workspaceBlockList li {
