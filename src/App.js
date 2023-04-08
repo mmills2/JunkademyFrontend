@@ -6,19 +6,21 @@ import TWindow from "./components/TWindow";
 import { useState } from "react";
 
 function App() {
-  const [name, addBlock] = useState("");
+  const [name, setName] = useState("");
+  const [input, setInput] = useState(false);
   const [count, setCount] = useState(0);
 
-  function addBlockApp(name) {
+  function addBlockApp(name, input) {
     setCount(count + 1);
-    addBlock(name);
+    setName(name);
+    setInput(input);
   }
 
   return (
     <div id="mainGrid">
       <HomeHeader />
       <CodeBlockLibrary addBlockApp={addBlockApp} />
-      <Sandbox addedBlock={name} count={count} />
+      <Sandbox addedName={name} addedInput={input} count={count} />
       <JWindow />
     </div>
   );

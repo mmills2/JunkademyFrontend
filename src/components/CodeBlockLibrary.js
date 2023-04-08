@@ -4,8 +4,8 @@ import { CBLButton } from "./CBLButton.js";
 function CodeBlockLibrary(props) {
   let addBlockApp = props.addBlockApp;
 
-  function addBlockCBL(name) {
-    addBlockApp(name);
+  function addBlockCBL(name, input) {
+    addBlockApp(name, input);
   }
 
   return (
@@ -20,11 +20,11 @@ function CodeBlockLibrary(props) {
       </div>
       <div id="categories" className="contentDiv">
         <Dropdown catTitle={"Variables"}>
-          <CBLButton name="Integer" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Double" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Boolean" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Character" addBlockCBL={addBlockCBL} />
-          <CBLButton name="String" addBlockCBL={addBlockCBL} />
+          <CBLButton name="Integer" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Double" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Boolean" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Character" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="String" input={true} addBlockCBL={addBlockCBL} />
         </Dropdown>
         <Dropdown catTitle={"Conditional"}>
           <CBLButton name="If" addBlockCBL={addBlockCBL} />
