@@ -1,10 +1,38 @@
-import { Link } from 'react-router-dom';
-import { Navigate } from 'react-router-dom';
+import { useLongPress } from "use-long-press";
+import React, { useState } from "react";
 
 function HomeHeader() {
-  
+  const [clsAdmin, setClsAdmin] = useState("headerButton");
+  const [clsUser, setClsUser] = useState("headerButton");
+
+  function handleClick() {
+    window.location = "/login.html";
+  }
+
+  const callback = React.useCallback(() => {}, []);
+
+  const bind = useLongPress(callback, {
+    onStart: (event, butID) =>
+      butID.context == "admin"
+        ? setClsAdmin("headerButtonPressed")
+        : butID.context == "user"
+        ? setClsUser("headerButtonPressed")
+        : null,
+    onFinish: (event, butID) =>
+      butID.context == "admin"
+        ? setClsAdmin("headerButton")
+        : butID.context == "user"
+        ? setClsUser("headerButton")
+        : null,
+    onCancel: (event, butID) =>
+      butID.context == "admin"
+        ? setClsAdmin("headerButton")
+        : butID.context == "user"
+        ? setClsUser("headerButton")
+        : null,
+  });
+
   return (
-    
     <div id="homeHeader">
       <h1 id="junkademy">Junkademy</h1>
       <div id="headerButtonsDiv">
@@ -12,16 +40,24 @@ function HomeHeader() {
           Challenges
         </button>
         <div id="loginsDiv">
-        <a href="/login.html">
-          <button id="adminLogin" className="headerButton" type="button">
+          <button
+            {...bind("admin")}
+            id="adminLogin"
+            className={clsAdmin}
+            type="button"
+            onClick={handleClick}
+          >
             Admin Login
           </button>
-          </a>
-          <a href="/login.html">
-          <button id="userLogin" className="headerButton" type="button">
+          <button
+            {...bind("user")}
+            id="userLogin"
+            className={clsUser}
+            type="button"
+            onClick={handleClick}
+          >
             Login
           </button>
-          </a>
         </div>
       </div>
     </div>

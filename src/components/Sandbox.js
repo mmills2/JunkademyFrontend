@@ -2,23 +2,7 @@ import WorkspaceBlock from "./WorkspaceBlock";
 import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-const workspaceBlocks = [
-  {
-    name: "block 1",
-  },
-  {
-    name: "block 2",
-  },
-  {
-    name: "block 3",
-  },
-  {
-    name: "block 4",
-  },
-  {
-    name: "block 5",
-  },
-];
+const workspaceBlocks = [];
 
 function Sandbox(props) {
   let addedBlock = props.addedBlock;
