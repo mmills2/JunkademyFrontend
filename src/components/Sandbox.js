@@ -1,26 +1,14 @@
 import WorkspaceBlock from "./WorkspaceBlock";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
-const workspaceBlocks = [
-  {
-    name: "block 1",
-  },
-  {
-    name: "block 2",
-  },
-  {
-    name: "block 3",
-  },
-  {
-    name: "block 4",
-  },
-  {
-    name: "block 5",
-  },
-];
+const workspaceBlocks = [];
 
-function Sandbox() {
+function Sandbox(props) {
+  let addedName = props.addedName;
+  let addedInput = props.addedInput;
+  let count = props.count;
+
   const [blocks, updateBlocks] = useState(workspaceBlocks);
 
   function handleOnDragEnd(result) {
@@ -35,11 +23,17 @@ function Sandbox() {
     updateBlocks(items);
   }
 
-  function addBlock() {
-    let newBlock = [{ name: "block " + (blocks.length + 1) }];
-    let newArray = blocks.concat(newBlock);
-    updateBlocks(newArray);
-  }
+  useEffect(() => {
+    function addBlock() {
+      let newBlock = [{ name: addedName, input: addedInput }];
+      let newArray = blocks.concat(newBlock);
+      updateBlocks(newArray);
+    }
+
+    if (count !== 0) {
+      addBlock();
+    }
+  }, [count]);
 
   return (
     <div id="sandbox">
@@ -55,7 +49,7 @@ function Sandbox() {
                 {...provided.droppableProps}
                 ref={provided.innerRef}
               >
-                {blocks.map(({ name }, index) => {
+                {blocks.map(({ name, input }, index) => {
                   return (
                     <Draggable key={name} draggableId={name} index={index}>
                       {(provided) => (
@@ -64,7 +58,7 @@ function Sandbox() {
                           {...provided.dragHandleProps}
                           ref={provided.innerRef}
                         >
-                          <WorkspaceBlock name={name} />
+                          <WorkspaceBlock name={name} input={input} />
                         </li>
                       )}
                     </Draggable>
@@ -75,7 +69,6 @@ function Sandbox() {
             )}
           </Droppable>
         </DragDropContext>
-        <button onClick={addBlock}>Add Block</button>
       </div>
     </div>
   );
