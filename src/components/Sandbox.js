@@ -1,6 +1,7 @@
 import WorkspaceBlock from "./WorkspaceBlock";
 import React, { useEffect, useRef, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import axios from "axios";
 
 const workspaceBlocks = [];
 
@@ -8,7 +9,9 @@ function Sandbox(props) {
   let addedName = props.addedName;
   let addedInput = props.addedInput;
   let count = props.count;
-  let getArrayApp = props.getArrayApp;
+  let setSyntaxApp = props.setSyntaxApp;
+
+  const TRANSLATE_BLOCKS_API_URL = "http://localhost:8080/translatecodeblocks";
 
   let numBlocks = useRef(-1);
   const [blocks, updateBlocks] = useState(workspaceBlocks);
@@ -30,8 +33,9 @@ function Sandbox(props) {
     console.log(blocks.find((e) => e.id === blockId));
   }
 
-  function onClick() {
-    getArrayApp(blocks);
+  async function onClick() {
+    const response = await axios.post(TRANSLATE_BLOCKS_API_URL, blocks);
+    setSyntaxApp(response.data);
   }
 
   useEffect(() => {

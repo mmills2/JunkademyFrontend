@@ -9,7 +9,7 @@ function App() {
   const [name, setName] = useState("");
   const [input, setInput] = useState(false);
   const [count, setCount] = useState(0);
-  const [array, setArray] = useState([]);
+  const [syntax, setSyntax] = useState("");
 
   function addBlockApp(name, input) {
     setCount(count + 1);
@@ -17,8 +17,8 @@ function App() {
     setInput(input);
   }
 
-  function getArrayApp(array) {
-    setArray(array);
+  function setSyntaxApp(syntax) {
+    setSyntax(syntax);
   }
 
   return (
@@ -30,9 +30,9 @@ function App() {
         addedInput={input}
         count={count}
         setCount={setCount}
-        getArrayApp={getArrayApp}
+        setSyntaxApp={setSyntaxApp}
       />
-      <JWindow array={array} />
+      <JWindow syntax={syntax} />
     </div>
   );
 }
