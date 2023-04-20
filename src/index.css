@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(7, 1fr);
-  height: 100vh;
+  min-height: 100vh;
   font-family: custom-font;
 }
 
@@ -118,22 +118,22 @@ body {
 #sandbox {
   display: flex;
   flex-flow: column;
-  grid-column: 2 / span 3;
-  grid-row: 2 / span 4;
+  grid-column: 2 / span 2;
+  grid-row: 2 / span 6;
   border-right: 3px solid;
 }
 
 #workspace {
   width: 100%;
   height: 100%;
-  position: relative
+  position: relative;
 }
 
 #jWindow {
   display: flex;
   flex-flow: column;
-  grid-column: 5 / span 2;
-  grid-row: 2 / span 4;
+  grid-column: 4 / span 3;
+  grid-row: 2 / span 6;
 }
 
 #tWindow {
@@ -145,8 +145,10 @@ body {
 }
 
 #window {
+  font-family: 'Courier New', Courier, monospace;
   height: 100%;
   background-color: white;
+  white-space: pre-wrap;
 }
 
 #tReturn {
@@ -168,15 +170,10 @@ body {
   padding: 0em 0.6em;
 }
 
-.workspaceBlock{
+.workspaceBlock {
   border: 1px solid;
   width: fit-content;
-}
-
-.test{
-  border: 1px solid;
-  width: fit-content;
-  height: 100%;
+  display: flex;
 }
 
 .workspaceBlockList li {
@@ -184,7 +181,14 @@ body {
   align-items: center;
   border: solid 2px #d0d0d0;
   /*border-radius: .2em;*/
-  padding: .2em .2em .2em .2em;
-  margin-bottom: .5em;
+  padding: 0.2em 0.2em 0.2em 0.2em;
+  margin-bottom: 0.5em;
   width: fit-content;
+}
+
+.headerButtonPressed {
+  border-radius: 10px;
+  border: 0px;
+  font-family: custom-font;
+  background-color: #a6d5f1;
 }
