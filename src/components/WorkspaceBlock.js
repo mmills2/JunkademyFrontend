@@ -1,23 +1,24 @@
 import React, { useState } from "react";
 
 function WorkspaceBlock(props) {
+  const [id, setId] = useState(props.id);
   let name = props.name;
   let input = props.input;
+  let updateValSandbox = props.updateValSandbox;
 
-  const [blockValue, setBlockValue] = useState("");
+  function realOnChange(e) {
+    updateValSandbox(id, e.target.value);
+  }
 
   return (
     <div className="workspaceBlock">
       {name}
       {(() => {
-        if (input == true) {
+        if (input === true) {
           return (
             <div style={{ display: "flex" }}>
               <div style={{ marginLeft: "3px", marginRight: "3px" }}> = </div>
-              <input
-                type="text"
-                onChange={(e) => setBlockValue(e.target.value)}
-              />
+              <input type="text" onChange={realOnChange} />
             </div>
           );
         }
