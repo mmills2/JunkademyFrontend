@@ -159,7 +159,7 @@ function Sandbox(props) {
                           ref={provided.innerRef}
                         >
                           <WorkspaceBlock
-                            id={numBlocks.current}
+                            id={id}
                             name={name}
                             input={input}
                             updateValSandbox={updateValSandbox}
