@@ -27,28 +27,31 @@ function CodeBlockLibrary(props) {
           <CBLButton name="String" input={true} addBlockCBL={addBlockCBL} />
         </Dropdown>
         <Dropdown catTitle={"Conditional"}>
-          <CBLButton name="If" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Else" addBlockCBL={addBlockCBL} />
+          <CBLButton name="If" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Else" input={true} addBlockCBL={addBlockCBL} />
         </Dropdown>
         <Dropdown catTitle={"Iterative"}>
-          <CBLButton name="For Loop" addBlockCBL={addBlockCBL} />
-          <CBLButton name="While Loop" addBlockCBL={addBlockCBL} />
+          <CBLButton name="For Loop" input={true} addBlockCBL={addBlockCBL} />
+          <CBLButton name="While Loop" input={true} addBlockCBL={addBlockCBL} />
         </Dropdown>
-        {/*<Dropdown catTitle={"I/O"} />*/}
         <Dropdown catTitle={"Operators"}>
-          <CBLButton name="Add" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Subtract" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Multiply" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Divide" addBlockCBL={addBlockCBL} />
-          <CBLButton name="And" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Or" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Equals" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Not" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Greater Than" addBlockCBL={addBlockCBL} />
-          <CBLButton name="Less Than" addBlockCBL={addBlockCBL} />
+          <CBLButton name="Add" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Subtract" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Multiply" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Divide" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="And" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Or" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Equals" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton name="Not" input={false} addBlockCBL={addBlockCBL} />
+          <CBLButton
+            name="Greater Than"
+            input={false}
+            addBlockCBL={addBlockCBL}
+          />
+          <CBLButton name="Less Than" input={false} addBlockCBL={addBlockCBL} />
         </Dropdown>
         <Dropdown catTitle={"Output"}>
-          <CBLButton name="Print" addBlockCBL={addBlockCBL} />
+          <CBLButton name="Print" input={true} addBlockCBL={addBlockCBL} />
         </Dropdown>
       </div>
     </div>

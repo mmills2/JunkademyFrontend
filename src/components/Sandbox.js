@@ -1,5 +1,5 @@
 import WorkspaceBlock from "./WorkspaceBlock";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 const workspaceBlocks = [];
@@ -8,7 +8,9 @@ function Sandbox(props) {
   let addedName = props.addedName;
   let addedInput = props.addedInput;
   let count = props.count;
+  let getArrayApp = props.getArrayApp;
 
+  let numBlocks = useRef(-1);
   const [blocks, updateBlocks] = useState(workspaceBlocks);
 
   function handleOnDragEnd(result) {
@@ -23,34 +25,100 @@ function Sandbox(props) {
     updateBlocks(items);
   }
 
+  function updateValSandbox(blockId, blockValue) {
+    blocks.find((e) => e.id === blockId).blockValue = blockValue;
+    console.log(blocks.find((e) => e.id === blockId));
+  }
+
+  function onClick() {
+    getArrayApp(blocks);
+  }
+
   useEffect(() => {
     function addBlock() {
       let newBlock = [];
       if (addedName === "If") {
+        numBlocks.current = numBlocks.current + 1;
         newBlock = [
-          { name: addedName, input: addedInput },
-          { name: "End If", input: false },
+          {
+            id: numBlocks.current,
+            name: addedName,
+            input: addedInput,
+            blockValue: "",
+          },
+          {
+            id: numBlocks.current + 1,
+            name: "End If",
+            input: false,
+            blockValue: "",
+          },
         ];
+        numBlocks.current = numBlocks.current + 1;
       } else if (addedName === "Else") {
+        numBlocks.current = numBlocks.current + 1;
         newBlock = [
-          { name: addedName, input: addedInput },
-          { name: "End Else", input: false },
+          {
+            id: numBlocks.current,
+            name: addedName,
+            input: addedInput,
+            blockValue: "",
+          },
+          {
+            id: numBlocks.current + 1,
+            name: "End Else",
+            input: false,
+            blockValue: "",
+          },
         ];
+        numBlocks.current = numBlocks.current + 1;
       } else if (addedName === "For Loop") {
+        numBlocks.current = numBlocks.current + 1;
         newBlock = [
-          { name: addedName, input: addedInput },
-          { name: "End For Loop", input: false },
+          {
+            id: numBlocks.current,
+            name: addedName,
+            input: addedInput,
+            blockValue: "",
+          },
+          {
+            id: numBlocks.current + 1,
+            name: "End For Loop",
+            input: false,
+            blockValue: "",
+          },
         ];
+        numBlocks.current = numBlocks.current + 1;
       } else if (addedName === "While Loop") {
+        numBlocks.current = numBlocks.current + 1;
         newBlock = [
-          { name: addedName, input: addedInput },
-          { name: "End While Loop", input: false },
+          {
+            id: numBlocks.current,
+            name: addedName,
+            input: addedInput,
+            blockValue: "",
+          },
+          {
+            id: numBlocks.current + 1,
+            name: "End While Loop",
+            input: false,
+            blockValue: "",
+          },
         ];
+        numBlocks.current = numBlocks.current + 1;
       } else {
-        newBlock = [{ name: addedName, input: addedInput }];
+        numBlocks.current = numBlocks.current + 1;
+        newBlock = [
+          {
+            id: numBlocks.current,
+            name: addedName,
+            input: addedInput,
+            blockValue: "",
+          },
+        ];
       }
       let newArray = blocks.concat(newBlock);
       updateBlocks(newArray);
+      console.log(newArray);
     }
 
     if (count !== 0) {
@@ -62,6 +130,7 @@ function Sandbox(props) {
     <div id="sandbox">
       <div className="mainTitleDiv">
         <h2 className="mainTitles">Sandbox</h2>
+        <button onClick={onClick}>Translate</button>
       </div>
       <div id="workspace" className="contentDiv">
         <DragDropContext onDragEnd={handleOnDragEnd}>
@@ -72,16 +141,25 @@ function Sandbox(props) {
                 {...provided.droppableProps}
                 ref={provided.innerRef}
               >
-                {blocks.map(({ name, input }, index) => {
+                {blocks.map(({ id, name, input }, index) => {
                   return (
-                    <Draggable key={name} draggableId={name} index={index}>
+                    <Draggable
+                      key={id}
+                      draggableId={id.toString()}
+                      index={index}
+                    >
                       {(provided) => (
                         <li
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                           ref={provided.innerRef}
                         >
-                          <WorkspaceBlock name={name} input={input} />
+                          <WorkspaceBlock
+                            id={numBlocks.current}
+                            name={name}
+                            input={input}
+                            updateValSandbox={updateValSandbox}
+                          />
                         </li>
                       )}
                     </Draggable>

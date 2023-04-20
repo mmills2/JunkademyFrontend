@@ -9,6 +9,7 @@ function App() {
   const [name, setName] = useState("");
   const [input, setInput] = useState(false);
   const [count, setCount] = useState(0);
+  const [array, setArray] = useState([]);
 
   function addBlockApp(name, input) {
     setCount(count + 1);
@@ -16,12 +17,22 @@ function App() {
     setInput(input);
   }
 
+  function getArrayApp(array) {
+    setArray(array);
+  }
+
   return (
     <div id="mainGrid">
       <HomeHeader />
       <CodeBlockLibrary addBlockApp={addBlockApp} />
-      <Sandbox addedName={name} addedInput={input} count={count} />
-      <JWindow />
+      <Sandbox
+        addedName={name}
+        addedInput={input}
+        count={count}
+        setCount={setCount}
+        getArrayApp={getArrayApp}
+      />
+      <JWindow array={array} />
     </div>
   );
 }
