@@ -25,7 +25,30 @@ function Sandbox(props) {
 
   useEffect(() => {
     function addBlock() {
-      let newBlock = [{ name: addedName, input: addedInput }];
+      let newBlock = [];
+      if (addedName === "If") {
+        newBlock = [
+          { name: addedName, input: addedInput },
+          { name: "End If", input: false },
+        ];
+      } else if (addedName === "Else") {
+        newBlock = [
+          { name: addedName, input: addedInput },
+          { name: "End Else", input: false },
+        ];
+      } else if (addedName === "For Loop") {
+        newBlock = [
+          { name: addedName, input: addedInput },
+          { name: "End For Loop", input: false },
+        ];
+      } else if (addedName === "While Loop") {
+        newBlock = [
+          { name: addedName, input: addedInput },
+          { name: "End While Loop", input: false },
+        ];
+      } else {
+        newBlock = [{ name: addedName, input: addedInput }];
+      }
       let newArray = blocks.concat(newBlock);
       updateBlocks(newArray);
     }
