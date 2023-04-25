@@ -18,8 +18,13 @@ const Terminal = () => {
     }
   };
 
+  const handleRunButtonClick = () => {
+    // Handle run button click
+  };
+
   return (
     <div className="terminal">
+         <button onClick={handleRunButtonClick}>Run</button>
       <div className="output">{output}</div>
       <input
         className="input"
