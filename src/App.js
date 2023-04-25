@@ -3,6 +3,7 @@ import CodeBlockLibrary from "./components/CodeBlockLibrary";
 import Sandbox from "./components/Sandbox";
 import JWindow from "./components/JWindow.js";
 import TWindow from "./components/TWindow";
+import Terminal from "./components/Terminal";
 import { useState } from "react";
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
   return (
     <div id="mainGrid">
       <HomeHeader />
+      <TWindow />
       <CodeBlockLibrary addBlockApp={addBlockApp} />
       <Sandbox
         addedName={name}
@@ -33,6 +35,7 @@ function App() {
         setSyntaxApp={setSyntaxApp}
       />
       <JWindow syntax={syntax} />
+      <Terminal />
     </div>
   );
 }
